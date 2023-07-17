@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/books" method="GET">
+        <service class="Bookshop\BackendApi\Api\BookRepositoryInterface" method="getBookList"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/products/search" method="GET">
+        <service class="Bookshop\BackendApi\Api\BookSearchInterface" method="searchBooks"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+     <route url="/V1/order" method="POST">
+        <service class="Bookshop\BackendApi\Api\OrderInterface" method="placeOrder"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/cart/add" method="POST">
+        <service class="Bookshop\BackendApi\Api\CartInterface" method="addItem"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/cart/remove" method="POST">
+        <service class="Bookshop\BackendApi\Api\CartInterface" method="removeItem"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>

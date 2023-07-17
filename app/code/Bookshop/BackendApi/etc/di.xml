@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Bookshop\BackendApi\Api\BookRepositoryInterface" type="Bookshop\BackendApi\Model\BookRepository"/>
+    <preference for="Bookshop\BackendApi\Api\BookSearchInterface" type="Bookshop\BackendApi\Model\BookSearch"/>
+    <preference for="Bookshop\BackendApi\Api\OrderInterface" type="Bookshop\BackendApi\Model\Order"/>
+    <preference for="Bookshop\BackendApi\Api\CartInterface" type="Bookshop\BackendApi\Model\Cart"/>
+</config>
